@@ -1,0 +1,15 @@
+GET http://127.0.0.1:3000/api/producto
+
+### Guardar
+POST http://127.0.0.1:3000/api/producto
+Content-Type: application/json
+
+{
+    "nombre": "PARLANTE",
+    "precio": "560.80",
+    "cantidad": 9,
+    "descripcion": "parlante marca DELL"
+}
+
+### Mostrar
+GET http://127.0.0.1:3000/api/producto/6

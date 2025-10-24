@@ -4,17 +4,17 @@ const usuarioController = require("./../controllers/usuario.controller")
 
 const Route = express.Router();
 
-Route.get("/producto", productoController.funListar);
-Route.post("/producto", productoController.funGuardar);
-Route.get("/producto", productoController.funMostrar);
-Route.put("/producto", productoController.funModificar);
-Route.delete("/producto", productoController.funEliminar);
+Route.get("/producto", productoController.funListar); // GET listar
+Route.post("/producto", productoController.funGuardar); // POST guardar
+Route.get("/producto/:id", productoController.funMostrar); // GET Mostrar
+Route.put("/producto/:id", productoController.funModificar); // PUT modificar
+Route.delete("/producto/:id", productoController.funEliminar); // DELETE eliminar
 
 Route.get("/usuario", usuarioController.funListar);
 Route.post("/usuario", usuarioController.funGuardar);
-Route.get("/usuario", usuarioController.funMostrar);
-Route.put("/usuario", usuarioController.funModificar);
-Route.delete("/usuario", usuarioController.funEliminar);
+Route.get("/usuario/:id", usuarioController.funMostrar);
+Route.put("/usuario/:id", usuarioController.funModificar);
+Route.delete("/usuario/:id", usuarioController.funEliminar);
 
 
 module.exports = Route
